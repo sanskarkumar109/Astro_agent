@@ -1,0 +1,20 @@
+[project]
+name = "astro-agent"
+version = "0.1.0"
+description = "Agentic astrology companion with tools, streaming API, React UI, and eval harness."
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.30.0",
+  "pydantic>=2.8.0",
+  "pyswisseph>=2.10.3.2",
+  "timezonefinder>=6.5.0",
+  "langgraph>=0.2.0",
+  "groq>=0.11.0",
+]
+
+[project.optional-dependencies]
+eval = []
+
+[tool.ruff]
+line-length = 100
