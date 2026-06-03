@@ -7,17 +7,17 @@ AstroAgent is a compact take-home implementation of a chat-based astrology compa
 Backend:
 
 ```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 uvicorn backend.app.main:app --reload
 ```
 
 Optional Groq AI mode:
 
+create a .env file 
+GROQ_API_KEY="your_groq_api_key_here"
+GROQ_MODEL="llama-3.3-70b-instant"
+
 ```powershell
-$env:GROQ_API_KEY="your_groq_api_key_here"
-$env:GROQ_MODEL="llama-3.3-70b-versatile"
 python -m uvicorn backend.app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
